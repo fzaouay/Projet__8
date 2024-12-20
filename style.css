@@ -1,0 +1,157 @@
+/*
+ Theme Name:  Fleurs d'orangers et chats errants - Oscars Short
+ Theme URI: https://www.koukaki.local
+ Author: Studio Koukaki
+ Author URI: https://www.koukaki.local
+ Template: foce
+ Description: Thème enfant à l'ocasion de la nomination aux Oscars Shorts
+ Version: 0.1
+ */
+
+
+/* Fade-in delle sezioni principali */
+/* Definizione dell'animazione di fade-in banner */
+@keyframes fadeInBanner {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);  /* Partenza dall'alto */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);  /* Arrivo alla posizione finale */
+  }
+}
+
+
+/* Animazione per la sezione .banner che si abbassa dall'alto */
+.banner {
+  opacity: 0;
+  transform: translateY(200px); /* Partenza dall'alto */
+  animation: fadeInBanner 1s ease-out 0.3s forwards; /* Ritardo per un effetto successivo */
+}
+
+/* Definizione dell'animazione di fade-in banner */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50px);  /* Partenza dal basso */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);  /* Arrivo alla posizione finale */
+  }
+}
+
+/* Animazione per #story che si solleva dal basso */
+.story {
+  opacity: 0;
+  transform: translateY(200px); /* Partenza dal basso */
+  animation: fadeIn 1s ease-out 0.5s forwards; /* Ritardo per sincronizzare l'animazione */
+}
+
+/* Animazione per #studio che si solleva dal basso */
+#studio {
+  opacity: 0;
+  transform: translateY(200px); /* Partenza dal basso */
+  animation: fadeIn 1s ease-out 0.7s forwards; /* Ritardo per sincronizzare l'animazione */
+}
+
+
+ /* Rotazione */
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .story__article::after,
+  .site-footer ul::after,
+  #studio h2::before,
+  #studio h2::after,
+  .site-footer::before,
+  .site-footer::after {
+    animation: rotation 18s linear infinite;
+  }
+  
+  /* Apparizione del logo */
+  /* @keyframes apparition-logo {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .banner img {
+    opacity: 0;
+    transform: translateY(200px);
+    animation: apparition-logo 2s 300ms both;
+  } */
+
+
+  /* Titolo sezioni */
+
+  @keyframes animTitleSection {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+  }
+  
+  #studio h2, #story h2{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: animTitleSection 1s 1s forwards;
+}
+
+
+  /* Galleggiamento */
+  @keyframes floating {
+    0% {
+      transform: translate3d(8px, 6px, 0);
+    }
+    12% {
+      transform: translate3d(0px, 6px, 0);
+    }
+    24% {
+      transform: translate3d(6px, -4px, 0);
+    }
+    36% {
+      transform: translate3d(6px, 0px, 0);
+    }
+    48% {
+      transform: translate3d(-4px, -6px, 0);
+    }
+    60% {
+      transform: translate3d(0px, -4px, 0);
+    }
+    72% {
+      transform: translate3d(-8px, 6px, 0);
+    }
+    84% {
+      transform: translate3d(-4px, 0px, 0);
+    }
+    100% {
+      transform: translate3d(6px, 6px, 0);
+    }
+  }
+  
+  .banner img{
+    animation: floating 7s 2s infinite ease-in-out;
+  }
+  
+  
+  
+  
+ 
